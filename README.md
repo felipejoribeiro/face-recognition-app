@@ -7,5 +7,5 @@ The technologies used in the Front End where:
 - React-particles-js : A particles library used in the background of the page.
 - React-tilt: The lib responsible for the tilting effect of the brain logo.
 
-The clarifai API was used for the face recognition functionality. 
 
+The clarifai API was used for the face recognition functionality. 
