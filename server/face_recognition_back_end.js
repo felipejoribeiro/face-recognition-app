@@ -49,6 +49,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfileId(req, res, pg)});
 
 app.put('/image', (req, res) => { image.handleImageIncrement(req, res, pg)});
 
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)});
+
 
 // // Load hash from your password DB.
 // bcrypt.compare("bacon", hash, function(err, res) {

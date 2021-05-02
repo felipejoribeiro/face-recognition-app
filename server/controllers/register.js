@@ -1,5 +1,9 @@
 const handleRegister = (req, res, pg, bcrypt) => {
 	const{email, name, password} = req.body;
+	if (!email || !name || ! password){
+		res.status(400).json("Null values inserted");
+		return false;
+	}
 	bcrypt.hash(password, null, null, function(_, hash) {
 		pg.transaction(trx => {
 			trx.insert({

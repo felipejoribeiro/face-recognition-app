@@ -1,5 +1,9 @@
 const handleSignIn = (req, res, pg, bcrypt) => {
 	const {email, password} = req.body;
+	if (! email || !password) {
+		res.status(400).json("Empty entries");
+		return false;
+	}
 	pg.select('email', 'hash').from('login')
 		.where('email', '=', email)
 		.then(data => {
